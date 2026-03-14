@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Tourism_Explorer_Desktop_Application.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tourism_Explorer_Desktop_Application"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView IsBackEnabled="True" Header=" 🌍 Tourism Explorer"
+                PaneDisplayMode="Left"
+                        OpenPaneLength="200"
+                IsPaneOpen="True">
+            
+            <NavigationView.MenuItems>
+        <NavigationViewItem Icon="Home" Content="Dashboard" Tag="Dash" Tapped="NavigationViewItem_Tapped"/>
+                <NavigationViewItem Icon="Map" Content="Destinations" Tag="mp" Tapped="NavigationViewItem_Tapped"/>
+                <NavigationViewItem Icon="World" Content="Experiences" Tag="wld" Tapped="NavigationViewItem_Tapped"/>
+                <NavigationViewItem Icon="CalendarWeek" Content="Bookings" Tag="bk" Tapped="NavigationViewItem_Tapped"/>
+                <NavigationViewItem Icon="Contact" Content="Contact Us" Tag="ct" Tapped="NavigationViewItem_Tapped"/>
+
+                <NavigationViewItem Icon="Setting" Content="Settings Page" Tag="Settings" VerticalAlignment="Bottom" Margin="0,285,0,0" Tapped="NavigationViewItem_Tapped"/>
+                <NavigationViewItem Icon="Cancel" Content="Logout" VerticalAlignment="Bottom" Margin="0,0,0,0" Tapped="NavigationViewItem_Tapped"/>
+
+            </NavigationView.MenuItems>
+
+    <Frame x:Name="TourismContent"/>
+
+
+            
+        </NavigationView>
+
+    </Grid>
+</Page>
